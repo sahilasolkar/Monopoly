@@ -28,54 +28,12 @@ public class Client {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Board monopoly= new Board();
-		
-		//monopoly.displayboard();
-		
-		//monopoly.update();
-		
-		//monopoly.displayboard();
-		
-		
-		//dice 
-		
-		Dice d = new Dice();
-		
 		Scanner sc = new Scanner(System.in);       // Scanner object   
 		
 		Game game = new Game();
 		
 		game.startGame();
 		
-		
-		//testing
-		//System.out.printf("   %3.3s 8.8s|\n %8.8s|\n_________|  |\n %", 60, "kentucky", "avenue");
-		
-		/*StringBuilder s = new StringBuilder("         |\n         |\n         |\n_________|");
-		s.setCharAt(37, 'A');
-		System.out.println(s);
-		*/
-		
-		/*Cell c = new PropertyCell(1, "jf", "fj", 20);
-		
-		c.setRent(50);
-		
-		//System.out.println(c.getPrice());
-		
-		Player p = new Player('a', 1);
-		Player x = new Player('b', 2);
-		
-		c.updateOwnership(p);
-		
-		System.out.println(c.getOwner().getName());
-		
-		x.payRent((PropertyCell) c);
-		
-		System.out.println(c.getRent());
-		
-		System.out.println(p.getBalance());
-		System.out.println(x.getBalance());
-		*/
 	}
 	
 	

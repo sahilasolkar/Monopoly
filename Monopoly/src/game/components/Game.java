@@ -24,6 +24,24 @@ public class Game {
 	Dice dice = new Dice();
 	int dicenum;
 	
+	public void evaluate(Player a[])
+	{
+		ArrayList<Player> winner = new ArrayList<Player>();
+		Player w = null;
+		for(int i=0;i<a.length-1;i++)
+		{
+			if(a[i].getBalance()>=a[i+1].getBalance())
+			{
+				w = a[i];
+			}
+			else
+			{
+				w = a[i+1];
+			}
+		}
+		System.out.println("\n The winner is => "+w.getName()+" with a balance of rs - "+w.getBalance());
+	}
+	
 	public void startGame()
 	{
 		players.add(p1);
@@ -86,11 +104,12 @@ public class Game {
 					
 					monopolyBoard.clear(p[j]);
 					
-					//System.out.println("the postition of player "+j+" is "+p[j].getPosition()+"\n");
-					
 					monopolyBoard.update(p[j]);
 					
 					monopolyBoard.display();
+					
+					p[j].showdetails();
+
 				}
 				else
 				{
@@ -101,6 +120,7 @@ public class Game {
 			status=sc.nextInt();
 		}
 		//here calculate the score and announce the winner (richest person on the current game status wins)
+		evaluate(p);
 		System.out.println("game terminated!");
 	}
 	
